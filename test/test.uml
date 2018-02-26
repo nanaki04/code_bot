@@ -1,0 +1,37 @@
+@startuml
+
+class GlobalClass { // global class description
+  -List<int> _cache // caches stuff
+  +int GetCache(int index) // gets cache
+}
+
+namespace UI.Scripts.PageViewModel.TestEvent {
+  class TestEventViewModel { // test event view description
+    +string Id
+    -int _count
+    +void OnClick(int buttonType, string id)
+    -int GetCount()
+  }
+
+  class TestHeaderViewModel {
+    +string TestImageResourceID
+  }
+
+  interface ITestHeaderViewModel { // test interface description
+    +string TestImageResourceID
+  }
+}
+
+namespace UI.Scripts.PageView.TestEvent {
+  class TestEventView { // event view
+    +Animator animation
+    +void Bind(TestEventViewModel viewModel)
+  }
+
+  enum ButtonType {
+    Ok
+    Cancel
+  }
+}
+
+@enduml

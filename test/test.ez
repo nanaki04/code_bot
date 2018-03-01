@@ -1,0 +1,9 @@
+ns Hi.Lol.Namespace
+  c DummyClass # some class
+    i Val1 # some value
+    s Name # some name
+  e Types
+    Yes
+    No
+  if IDummyClass # dummy class interface
+    i Val1 # some value

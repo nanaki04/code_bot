@@ -25,6 +25,7 @@ defmodule CodeBot.Mixfile do
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.16", only: [:dev], runtime: false},
       {:plant_uml_parser, git: "https://github.com/nanaki04/plant_uml_parser.git"},
+      {:ez_parser, git: "https://github.com/nanaki04/ez_parser.git"},
       {:c_sharp_code_generator, git: "https://github.com/nanaki04/c_sharp_code_generator.git"},
     ]
   end

@@ -29,11 +29,13 @@ defmodule CodeBot.CLI do
     usage: cbot <input_file> <output_language>
 
     supported input files:
-      - [default, .uml, .plantuml, .plnt] plant uml syntax
+      - (default) [.uml, .plantuml, .plnt] plant uml syntax
       - [.ez] basic syntax, fast to write class definition script
 
     supported output languages:
       - c#
+      - php
+      - uml (plant uml)
 
     options:
     -h    [--help] display this help
@@ -60,12 +62,27 @@ defmodule CodeBot.CLI do
 
   @spec generate_output(CodeParserState.state, String.t) :: :ok
   defp generate_output(code_parser_state, "c#") do
-    IO.puts("generating output")
+    IO.puts("generating cs files")
     CSharpCodeGenerator.generate(code_parser_state, root: File.cwd!())
+    IO.puts("output generated in: " <> File.cwd!())
+  end
+
+  defp generate_output(code_parser_state, "uml"), do: generate_plant_uml code_parser_state
+
+  defp generate_output(code_parser_state, "php") do
+    IO.puts("generating php files")
+    PhpCodeGenerator.generate(code_parser_state, root: File.cwd!())
     IO.puts("output generated in: " <> File.cwd!())
   end
 
   defp generate_output(_, language) do
     IO.puts "ERROR: the output language " <> language <> " unfortunately is unsupported at the moment"
+  end
+
+  @spec generate_plant_uml(CodeParserState.state) :: :ok
+  defp generate_plant_uml(code_parser_state) do
+    IO.puts("generating plant uml")
+    PlantUMLGenerator.generate(code_parser_state, root: File.cwd!())
+    IO.puts("output generated in: " <> File.cwd!())
   end
 end

@@ -27,6 +27,8 @@ defmodule CodeBot.Mixfile do
       {:plant_uml_parser, git: "https://github.com/nanaki04/plant_uml_parser.git"},
       {:ez_parser, git: "https://github.com/nanaki04/ez_parser.git"},
       {:c_sharp_code_generator, git: "https://github.com/nanaki04/c_sharp_code_generator.git"},
+      {:plant_uml_generator, git: "https://github.com/nanaki04/plant_uml_generator.git"},
+      {:php_code_generator, git: "https://github.com/nanaki04/php_code_generator.git"},
     ]
   end
 end

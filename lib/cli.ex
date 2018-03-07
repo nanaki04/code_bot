@@ -34,6 +34,7 @@ defmodule CodeBot.CLI do
 
     supported output languages:
       - c#
+      - unity (alias: u#) c# for unity
       - php
       - uml (plant uml)
 
@@ -67,6 +68,8 @@ defmodule CodeBot.CLI do
     IO.puts("output generated in: " <> File.cwd!())
   end
 
+  defp generate_output(code_parser_state, "u#"), do: generate_for_unity code_parser_state
+  defp generate_output(code_parser_state, "unity"), do: generate_for_unity code_parser_state
   defp generate_output(code_parser_state, "uml"), do: generate_plant_uml code_parser_state
 
   defp generate_output(code_parser_state, "php") do
@@ -85,4 +88,12 @@ defmodule CodeBot.CLI do
     PlantUMLGenerator.generate(code_parser_state, root: File.cwd!())
     IO.puts("output generated in: " <> File.cwd!())
   end
+
+  @spec generate_for_unity(CodeParserState.state) :: :ok
+  defp generate_for_unity(code_parser_state) do
+    IO.puts("generating cs files for unity")
+    CSharpCodeGenerator.generate_for_unity(code_parser_state, root: File.cwd!())
+    IO.puts("output generated in: " <> File.cwd!())
+  end
+
 end

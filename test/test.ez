@@ -2,6 +2,9 @@ ns Hi.Lol.Namespace
   c DummyClass # some class
     i Val1 # some value
     s Name # some name
+    _ob-Unit _privateObs
+    _Ns.Val _someNestedType
+    i Incr(i val, f val2, s val3)
   e Types
     Yes
     No

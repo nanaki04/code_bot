@@ -37,6 +37,10 @@ or alternatively add the installation path to your environment paths.
 
 ## Usage
 
+```
+$ cbot <input_file> <output_language>
+```
+
 Code bot currently can parse the following formats:
 
 - [.uml, .plantuml, .plnt] plant uml syntax (default)

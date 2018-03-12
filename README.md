@@ -212,3 +212,7 @@ And you can generate code with the following command:
 ```
 $ cbot Dummy.ez c#
 ```
+
+## Generating Uml
+
+You can currently generate plantUML from ez script, but functionality for generating uml from multiple c# or php files is still under construction.

@@ -36,7 +36,7 @@ mix escript.build
 ```
 
 It will generate the file ```cbot``` in the application root directory.
-To run the command line tool conveniently, it is probably a good idea to sudo cp it in a lib directory:
+To run the command line tool conveniently, it is probably a good idea to sudo cp it in a bin directory:
 
 - mac: ```sudo cp cbot /usr/local/bin/cbot```
 - linux: TODO

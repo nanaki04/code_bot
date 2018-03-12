@@ -10,6 +10,13 @@ $ cbot <input_file> <output_language>
 
 ## Installation
 
+Clone this repository:
+
+```
+$ git clone https://github.com/nanaki04/code_bot.git
+$ cd code_bot
+```
+
 To run the command line tool, you will need to have erlang installed.
 
 - mac: ```brew install erlang```
@@ -28,6 +35,7 @@ You can build the command line tool with the following command:
 mix escript.build
 ```
 
+It will generate the file ```cbot``` in the application root directory.
 To run the command line tool conveniently, it is probably a good idea to sudo cp it in a lib directory:
 
 - mac: ```sudo cp cbot /usr/local/bin/cbot```

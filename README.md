@@ -12,15 +12,15 @@ $ cbot <input_file> <output_language>
 
 To run the command line tool, you will need to have erlang installed.
 
-mac: ```brew install erlang```
-linux: ```sudo apt-get erlang```
-(this tool does not have windows support atm)
+- mac: ```brew install erlang```
+- linux: ```sudo apt-get erlang```
+- (this tool does not have windows support atm)
 
 To build the command line tool yourself, you need to have elixir installed.
 
-mac: ```brew install elixir```
-linux: ```sudo apt-get elixir```
-(this tool does not have windows support atm)
+- mac: ```brew install elixir```
+- linux: ```sudo apt-get elixir```
+- (this tool does not have windows support atm)
 
 You can build the command line tool with the following command:
 
@@ -30,8 +30,8 @@ mix escript.build
 
 To run the command line tool conveniently, it is probably a good idea to sudo cp it in a lib directory:
 
-mac: ```sudo cp cbot /usr/local/bin/cbot```
-linux: TODO
+- mac: ```sudo cp cbot /usr/local/bin/cbot```
+- linux: TODO
 
 or alternatively add the installation path to your environment paths.
 

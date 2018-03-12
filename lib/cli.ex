@@ -10,7 +10,7 @@ defmodule CodeBot.CLI do
   end
 
   @spec parse_args(args) :: input
-  defp parse_args(args) do
+  def parse_args(args) do
     parse = OptionParser.parse(args,
       switches: [help: :boolean],
       aliases: [h: :help]
@@ -24,7 +24,7 @@ defmodule CodeBot.CLI do
   end
 
   @spec process(input) :: :ok
-  defp process(:help) do
+  def process(:help) do
     IO.puts """
     usage: cbot <input_file> <output_language>
 
@@ -43,14 +43,14 @@ defmodule CodeBot.CLI do
     """
   end
 
-  defp process({input_file, output_language}) do
+  def process({input_file, output_language}) do
     input_file
     |> parse_input
     |> generate_output(output_language)
   end
 
   @spec parse_input(String.t) :: CodeParserState.state
-  defp parse_input(input_file) do
+  def parse_input(input_file) do
     IO.puts("parsing input")
     case hd(Regex.run(~r/(?<=\.)\w+/, input_file)) do
       "uml" -> PlantUmlParser.parse(input_file)
@@ -62,35 +62,35 @@ defmodule CodeBot.CLI do
   end
 
   @spec generate_output(CodeParserState.state, String.t) :: :ok
-  defp generate_output(code_parser_state, "c#") do
+  def generate_output(code_parser_state, "c#") do
     IO.puts("generating cs files")
     CSharpCodeGenerator.generate(code_parser_state, root: File.cwd!())
     IO.puts("output generated in: " <> File.cwd!())
   end
 
-  defp generate_output(code_parser_state, "u#"), do: generate_for_unity code_parser_state
-  defp generate_output(code_parser_state, "unity"), do: generate_for_unity code_parser_state
-  defp generate_output(code_parser_state, "uml"), do: generate_plant_uml code_parser_state
+  def generate_output(code_parser_state, "u#"), do: generate_for_unity code_parser_state
+  def generate_output(code_parser_state, "unity"), do: generate_for_unity code_parser_state
+  def generate_output(code_parser_state, "uml"), do: generate_plant_uml code_parser_state
 
-  defp generate_output(code_parser_state, "php") do
+  def generate_output(code_parser_state, "php") do
     IO.puts("generating php files")
     PhpCodeGenerator.generate(code_parser_state, root: File.cwd!())
     IO.puts("output generated in: " <> File.cwd!())
   end
 
-  defp generate_output(_, language) do
+  def generate_output(_, language) do
     IO.puts "ERROR: the output language " <> language <> " unfortunately is unsupported at the moment"
   end
 
   @spec generate_plant_uml(CodeParserState.state) :: :ok
-  defp generate_plant_uml(code_parser_state) do
+  def generate_plant_uml(code_parser_state) do
     IO.puts("generating plant uml")
     PlantUMLGenerator.generate(code_parser_state, root: File.cwd!())
     IO.puts("output generated in: " <> File.cwd!())
   end
 
   @spec generate_for_unity(CodeParserState.state) :: :ok
-  defp generate_for_unity(code_parser_state) do
+  def generate_for_unity(code_parser_state) do
     IO.puts("generating cs files for unity")
     CSharpCodeGenerator.generate_for_unity(code_parser_state, root: File.cwd!())
     IO.puts("output generated in: " <> File.cwd!())

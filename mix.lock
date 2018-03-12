@@ -1,10 +1,10 @@
 %{"boilerplate_generator": {:git, "https://github.com/nanaki04/boilerplate_generator.git", "77592885761736db8e40c0862c7ce9f62e1d974d", []},
-  "c_sharp_code_generator": {:git, "https://github.com/nanaki04/c_sharp_code_generator.git", "fad325779c3ba0200d91c00bd5c656a908a7ca7a", []},
+  "c_sharp_code_generator": {:git, "https://github.com/nanaki04/c_sharp_code_generator.git", "5edc297923f149bfffc4f22e6dd9c0905945b72f", []},
   "code_parser_state": {:git, "https://github.com/nanaki04/code_parser_state.git", "b21eab5d5fdf7cda04cde74bb2adb6af7152d4ed", []},
   "dialyxir": {:hex, :dialyxir, "0.5.1", "b331b091720fd93e878137add264bac4f644e1ddae07a70bf7062c7862c4b952", [:mix], [], "hexpm"},
   "earmark": {:hex, :earmark, "1.2.4", "99b637c62a4d65a20a9fb674b8cffb8baa771c04605a80c911c4418c69b75439", [:mix], [], "hexpm"},
   "ex_doc": {:hex, :ex_doc, "0.18.3", "f4b0e4a2ec6f333dccf761838a4b253d75e11f714b85ae271c9ae361367897b7", [:mix], [{:earmark, "~> 1.1", [hex: :earmark, repo: "hexpm", optional: false]}], "hexpm"},
   "ez_parser": {:git, "https://github.com/nanaki04/ez_parser.git", "696d775edb6805d00ddfc1731d48f88834a79325", []},
-  "php_code_generator": {:git, "https://github.com/nanaki04/php_code_generator.git", "4f724ff5034aaee85628929419eff7f9980e6999", []},
+  "php_code_generator": {:git, "https://github.com/nanaki04/php_code_generator.git", "46f3ddd6c46b8dda7bcf79f17d7309a287f8bfb8", []},
   "plant_uml_generator": {:git, "https://github.com/nanaki04/plant_uml_generator.git", "96a3dbc1f613c461af045edef541d0d33058b5d4", []},
   "plant_uml_parser": {:git, "https://github.com/nanaki04/plant_uml_parser.git", "0e618d9a352374f51963883f4fec3bf4a6f69473", []}}

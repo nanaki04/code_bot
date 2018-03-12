@@ -195,16 +195,16 @@ Dummy.ez
 
 ```
 ns Dummy.Namespace
-	c DummyClass
-		i PublicInt # a public int
-		_s PrivateString
-		f CalcRate(f val1, f val2) # calculate the rate
-	if IDummyClass
-		i PublicInt
-		f CalcRate(f val1, f val2)
-	e ButtonType
-		OK
-		Cancel
+  c DummyClass
+    i PublicInt # a public int
+    _s PrivateString
+    f CalcRate(f val1, f val2) # calculate the rate
+  if IDummyClass
+    i PublicInt
+    f CalcRate(f val1, f val2)
+  e ButtonType
+    OK
+    Cancel
 ```
 
 And you can generate code with the following command:

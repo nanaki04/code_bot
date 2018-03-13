@@ -5,6 +5,6 @@
   "earmark": {:hex, :earmark, "1.2.4", "99b637c62a4d65a20a9fb674b8cffb8baa771c04605a80c911c4418c69b75439", [:mix], [], "hexpm"},
   "ex_doc": {:hex, :ex_doc, "0.18.3", "f4b0e4a2ec6f333dccf761838a4b253d75e11f714b85ae271c9ae361367897b7", [:mix], [{:earmark, "~> 1.1", [hex: :earmark, repo: "hexpm", optional: false]}], "hexpm"},
   "ez_parser": {:git, "https://github.com/nanaki04/ez_parser.git", "696d775edb6805d00ddfc1731d48f88834a79325", []},
-  "php_code_generator": {:git, "https://github.com/nanaki04/php_code_generator.git", "46f3ddd6c46b8dda7bcf79f17d7309a287f8bfb8", []},
+  "php_code_generator": {:git, "https://github.com/nanaki04/php_code_generator.git", "a005b03fbf540aededaefa513fa50a6b214c72eb", []},
   "plant_uml_generator": {:git, "https://github.com/nanaki04/plant_uml_generator.git", "96a3dbc1f613c461af045edef541d0d33058b5d4", []},
   "plant_uml_parser": {:git, "https://github.com/nanaki04/plant_uml_parser.git", "0e618d9a352374f51963883f4fec3bf4a6f69473", []}}

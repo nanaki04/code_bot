@@ -174,13 +174,13 @@ class DummyClass
      * TODO
      * @var string
      */
-    private $privateString
+    private $privateString;
 
     /**
      * a public int
      * @var int
      */
-    public $publicInt
+    public $publicInt;
 
     /**
      * calculate the rate

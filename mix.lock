@@ -7,4 +7,4 @@
   "ez_parser": {:git, "https://github.com/nanaki04/ez_parser.git", "d3570c9dc85aba4068c23b7bacc17f1a3da262bd", []},
   "php_code_generator": {:git, "https://github.com/nanaki04/php_code_generator.git", "943f6df641f798240b08e7ab3ffc207bc548e041", []},
   "plant_uml_generator": {:git, "https://github.com/nanaki04/plant_uml_generator.git", "b1e4105ad0198565ad7b61a59644549aa5671544", []},
-  "plant_uml_parser": {:git, "https://github.com/nanaki04/plant_uml_parser.git", "5305b49c9103a5d132b7ed277d6ed0ecead8b20b", []}}
+  "plant_uml_parser": {:git, "https://github.com/nanaki04/plant_uml_parser.git", "ba4e51c3db40605e47b77a56147fccc2ccd9c6a2", []}}
